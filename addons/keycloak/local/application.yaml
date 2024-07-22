@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: keycloak
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    name: in-cluster
+    namespace: keycloak
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  source:
+    chart: keycloak
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 21.7.1
+    helm:
+      valuesObject:
+        postgresql:
+          enabled: false
+        externalDatabase:
+          host: "postgres.local.svc.cluster.local"
+          database: keycloak
+          existingSecret: keycloak-owner-user.postgres.credentials.postgresql.acid.zalan.do
+          existingSecretUserKey: username
+          existingSecretPasswordKey: password
+        auth:
+          adminUser: admin
+          existingSecret: keycloak-admin
+          passwordSecretKey: password
