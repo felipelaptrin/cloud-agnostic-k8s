@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: private-repo
+    namespace: argocd
+    labels:
+        argocd.argoproj.io/secret-type: repository
+stringData:
+    type: git
+    url: ENC[AES256_GCM,data:MOYWcetjWLytUxWWPZMRuOKmewUGnsFgWpoT0WVzOCpWaHWnmKEEZ+yHCiWdlV4Fn6HO,iv:L2nBx4lG5q86IDjnGDI+9ikKFuXjtFf2E/pM++QXNA0=,tag:pTNnnvld7uetTM5Jrfi6DQ==,type:str]
+    sshPrivateKey: ENC[AES256_GCM,data:qr8GGs5Gpr+t8hoK9URGXoZPp3Bh/kHbwJ5tV5j16gVKRYf/T8YtO/6CPf/CsWkjCXikcymgUgFj+G8iQ+uHiGkCx3/r7sP0b/ywuEqeqXSlEMIFYiYi640s8coa0FStOJ9QF5N73J1E24hozOt/gzqEKEG6ezleELn9mBvabSti0UJuE+tMDpIVq31D0v8fPy3r64iduo29C4g0QXIY6L8rZ5pLZd44HrvFLd3Fk7BjP3+V719cMvn6c3AwMuKCgYWugPuLxwNpqkcovyOnGYHs+wZPxMfeUMqfT0SMjFXS/q2mgqM8ZQSnYpa8nD53sK9EjzJqiHbisrfWgPZ1ZRD2swdBsQZ442P/p3QADbxz4uBK22+drq9TLP+GrPNLV8IWLKbwFR8kFTZmLN6jaffsZm2qHC/jtusbZWZf1Psy1SUdfs42OKWSAq4pvtegAAJWVARG17QDXGZx5QB0Hcofx3568O8PNpmBXkNaotP0exV3BHHX4XaiuXsjLyO/Xs/oerq3rtYcjfjmUWOF,iv:Z2C7lfn/joFr59LX/9ptHmjWAWLP6K5jhRWeNphrVzU=,tag:0xC0VMjYsl2S/EXCoDA6Jg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ng2fph2j9yfacfv2n5xnt5xf605h4htcqpt0uv3q75gtayv42qlq468cwh
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBIcGY0Rllvb0NPWWJMRVp3
+            eWlKdUdTT0hCWkV3b2pIckhYemlMTklLdWdZClo5ZnRvQTk5cjUwVTVhc3BlRXV5
+            UE12VFVGa21zdTJGZnlZS3YzNi9CaW8KLS0tIGFLenNKUDBhTFliekxsTmQ1dHdr
+            MjVyTmhYVGpsSmk5d1hEelI5ejJTbG8KSffTWL0tNoQDNnnxrgO94u7fN69pXsYP
+            0FfjNoqnUpRtXKDXIUtfHo6TPOwgwLCxaDgBaXKfyQ94pucEAcPeaA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-07-22T01:14:49Z"
+    mac: ENC[AES256_GCM,data:OEXZzYIlqxjdClljPpPuiYJg9ziYDfD8RoLuLXesMNICZd6TGUxYe+oblcxN4xed1Rwp8+xpYQfIes99bFw7ZLWHbPvpOomAtWyxCfG9FaJeRzSBz88a+Ad2bs8kvkNrDu/A3Yvc7maRW9hgzCpMz5Kds8RIHzjT+kSzussv1zs=,iv:EcqyDWKprEzqtDOiUKHz47PKGuAwAW43PJsCYhtulvg=,tag:D7TrCOniRQkewkHKtEmR1A==,type:str]
+    pgp: []
+    unencrypted_regex: ^(apiVersion|metadata|kind|type)$
+    version: 3.9.0
