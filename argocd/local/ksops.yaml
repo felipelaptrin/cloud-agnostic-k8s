@@ -3,5 +3,9 @@ kind: ksops
 metadata:
   name: argocd-ksops
   namespace: argocd
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: ksops
 files:
   - ./ssh-private-repository.yaml
