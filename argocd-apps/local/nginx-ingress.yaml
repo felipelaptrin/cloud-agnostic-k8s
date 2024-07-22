@@ -14,5 +14,5 @@ spec:
       selfHeal: true
   source:
     repoURL: git@github.com:felipelaptrin/cloud-agnostic-k8s.git
-    targetRevision: feat/argocd
+    targetRevision: main
     path: addons/nginx-ingress-controller/local
