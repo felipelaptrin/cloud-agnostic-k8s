@@ -3,6 +3,5 @@ kind: Kustomization
 resources:
   - ingress.yaml
   - ksops.yaml
-  - ssh-private-repository.yaml
 generators:
   - ksops.yaml
