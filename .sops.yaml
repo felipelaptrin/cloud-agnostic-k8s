@@ -1,0 +1,4 @@
+creation_rules:
+  - unencrypted_regex: "^(apiVersion|metadata|kind|type)$"
+    path_regex: .*/local/.*
+    age: "age1ng2fph2j9yfacfv2n5xnt5xf605h4htcqpt0uv3q75gtayv42qlq468cwh"
