@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - application.yaml
 generators:
-  - ksops.yaml.yaml
+  - ksops.yaml
