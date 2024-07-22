@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: addon-argocd
+  name: addon-metrics-server
   namespace: argocd
 spec:
   project: default
@@ -15,4 +15,4 @@ spec:
   source:
     repoURL: git@github.com:felipelaptrin/cloud-agnostic-k8s.git
     targetRevision: main
-    path: argocd/local
+    path: addons/metrics-server/local
