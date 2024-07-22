@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.10.7/.schema/devbox.schema.json",
+  "packages": [
+    "kubectl@1.30.2",
+    "awscli2@2.17.5",
+    "opentofu@1.7.3",
+    "kind@0.23.0",
+    "docker@24.0.9",
+    "age@1.2.0",
+    "sops@3.9.0"
+  ],
+  "shell": {
+    "scripts": {
+      "local-init": [
+        "kind create cluster --name k8s-local --config kind.yaml",
+        "helm repo add argo https://argoproj.github.io/argo-helm",
+        "helm repo update",
+        "kubectl apply -f addons/namespaces/local",
+        "helm install argocd argo/argo-cd --version 7.3.9 --values argocd/local/helm-values.yaml --namespace argocd --create-namespace",
+      ],
+      "local-destroy": [
+        "kind delete cluster --name k8s-local"
+      ]
+    }
+  }
+}
