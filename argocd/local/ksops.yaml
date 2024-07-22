@@ -2,5 +2,6 @@ apiVersion: viaduct.ai/v1
 kind: ksops
 metadata:
   name: argocd-ksops
+  namespace: argocd
 files:
   - ./ssh-private-repository.yaml
