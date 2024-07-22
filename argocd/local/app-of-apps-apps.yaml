@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps-addons
+  name: app-of-apps-apps
   namespace: argocd
 spec:
   project: default
@@ -15,4 +15,4 @@ spec:
   source:
     repoURL: git@github.com:felipelaptrin/cloud-agnostic-k8s.git
     targetRevision: main
-    path: argocd-apps/local/addons
+    path: argocd-apps/local/apps
