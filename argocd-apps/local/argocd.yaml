@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: addon-nginx-ingress
+  name: addon-argocd
   namespace: argocd
 spec:
   project: default
