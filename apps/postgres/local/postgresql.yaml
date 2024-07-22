@@ -1,0 +1,25 @@
+apiVersion: acid.zalan.do/v1
+kind: postgresql
+metadata:
+  name: postgres
+  namespace: local
+spec:
+  teamId: "devops"
+  volume:
+    size: 1Gi
+  numberOfInstances: 2
+  preparedDatabases:
+    keycloak:
+      defaultUsers: true
+      secretNamespace: keycloak
+      schemas:
+        public:
+          defaultUsers: true
+    harbor:
+      defaultUsers: true
+      secretNamespace: harbor
+      schemas:
+        public:
+          defaultUsers: true
+  postgresql:
+    version: "16"
