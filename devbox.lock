@@ -293,6 +293,54 @@
         }
       }
     },
+    "kustomize-sops@4.3.2": {
+      "last_modified": "2024-07-07T07:43:47Z",
+      "resolved": "github:NixOS/nixpkgs/b60793b86201040d9dee019a05089a9150d08b5b#kustomize-sops",
+      "source": "devbox-search",
+      "version": "4.3.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qbcplfzix04mbnqajj55samdij3n8w0m-kustomize-sops-4.3.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/qbcplfzix04mbnqajj55samdij3n8w0m-kustomize-sops-4.3.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/95vvyax4mjdngfcwpm1nz6kkbj5rj7gy-kustomize-sops-4.3.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/95vvyax4mjdngfcwpm1nz6kkbj5rj7gy-kustomize-sops-4.3.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2w0vkkvk7qblfyif2cjwckivxng25d05-kustomize-sops-4.3.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/2w0vkkvk7qblfyif2cjwckivxng25d05-kustomize-sops-4.3.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5bvps0bw0mkpdpzhrd3sylfh3k4y7p0a-kustomize-sops-4.3.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/5bvps0bw0mkpdpzhrd3sylfh3k4y7p0a-kustomize-sops-4.3.2"
+        }
+      }
+    },
     "opentofu@1.7.3": {
       "last_modified": "2024-07-10T00:27:26Z",
       "resolved": "github:NixOS/nixpkgs/16e401f01842c5bb2499e78c1fe227f939c0c474#opentofu",

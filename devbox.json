@@ -8,6 +8,7 @@
     "docker@24.0.9",
     "age@1.2.0",
     "sops@3.9.0",
+    "kustomize-sops@4.3.2",
   ],
   "shell": {
     "scripts": {
